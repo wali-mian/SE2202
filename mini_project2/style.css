@@ -1,0 +1,360 @@
+/**
+ * Course Explorer Stylesheet
+ * Provides professional styling for the Course Explorer application
+ * Features responsive design and visual separation of functional areas
+ */
+
+/* ======================
+   GENERAL STYLES
+   ====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+/* ======================
+   HEADER STYLES
+   ====================== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* ======================
+   UPLOAD SECTION STYLES
+   ====================== */
+/* Section for file upload with distinct blue styling */
+.upload-section {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 5px solid #667eea;
+}
+
+.upload-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.05em;
+}
+
+.upload-section input[type="file"] {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.upload-section input[type="file"]:hover {
+    border-color: #667eea;
+    background-color: #fafbff;
+}
+
+/* Error message styling */
+.error-message {
+    display: block;
+    margin-top: 10px;
+    color: #d32f2f;
+    font-weight: 600;
+    font-size: 0.95em;
+    min-height: 20px;
+}
+
+/* ======================
+   FILTERS SECTION STYLES
+   ====================== */
+/* Section for filter dropdowns with distinct orange styling */
+.filters-section {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 5px solid #ff9800;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.filter-group select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.filter-group select:hover {
+    border-color: #ff9800;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #ff9800;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.3);
+}
+
+/* ======================
+   SORTING SECTION STYLES
+   ====================== */
+/* Section for sorting options with distinct green styling */
+.sorting-section {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 5px solid #4caf50;
+}
+
+.sort-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.sort-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.sort-group select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.sort-group select:hover {
+    border-color: #4caf50;
+}
+
+.sort-group select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* ======================
+   COURSES SECTION STYLES
+   ====================== */
+/* Section displaying list of course cards */
+.courses-section {
+    margin-bottom: 25px;
+}
+
+.courses-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* Grid layout for course cards with scrollable area */
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Individual course card styling */
+.course-card {
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    transform: translateY(-5px);
+    background: #ffffff;
+}
+
+.course-card h3 {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.course-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.course-card .course-id {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.85em;
+}
+
+.course-card .course-level {
+    color: #666;
+    font-size: 0.85em;
+}
+
+/* ======================
+   COURSE DETAILS SECTION STYLES
+   ====================== */
+/* Section displaying detailed information about selected course */
+.details-section {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #9c27b0;
+}
+
+.details-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.course-details {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.course-details p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.course-details .detail-label {
+    font-weight: 600;
+    color: #333;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.course-details .detail-value {
+    color: #555;
+}
+
+/* ======================
+   SCROLLBAR STYLING
+   ====================== */
+/* Custom scrollbar for courses list */
+.courses-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.courses-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.courses-list::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+.courses-list::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+/* ======================
+   RESPONSIVE DESIGN
+   ====================== */
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    /* Single column layout for filters on small screens */
+    .filters-section {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce max height for course list on mobile */
+    .courses-list {
+        grid-template-columns: 1fr;
+        max-height: 400px;
+    }
+
+    .upload-section,
+    .filters-section,
+    .sorting-section,
+    .details-section {
+        padding: 15px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    .courses-list {
+        grid-template-columns: 1fr;
+        max-height: 300px;
+    }
+}

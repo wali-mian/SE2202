@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Header -->
+        <header>
+            <h1>Course Explorer</h1>
+        </header>
+
+        <!-- File Upload Section
+             Allows users to select and upload a JSON file containing course data -->
+        <section class="upload-section">
+            <label for="fileInput">Upload Course Data (JSON):</label>
+            <input type="file" id="fileInput" accept=".json" />
+            <!-- Error message container for file loading errors -->
+            <span id="errorMessage" class="error-message"></span>
+        </section>
+
+        <!-- Filters Section
+             Contains dropdown menus for filtering courses by various criteria
+             Dropdowns are dynamically populated based on available data -->
+        <section class="filters-section">
+            <div class="filter-group">
+                <label for="levelFilter">Level:</label>
+                <select id="levelFilter">
+                    <option value="">-- All Levels --</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="creditsFilter">Credits:</label>
+                <select id="creditsFilter">
+                    <option value="">-- All Credits --</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="instructorFilter">Instructor:</label>
+                <select id="instructorFilter">
+                    <option value="">-- All Instructors --</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="departmentFilter">Department:</label>
+                <select id="departmentFilter">
+                    <option value="">-- All Departments --</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="semesterFilter">Semester:</label>
+                <select id="semesterFilter">
+                    <option value="">-- All Semesters --</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Sorting Section
+             Provides sorting options for organizing course listings -->
+        <section class="sorting-section">
+            <div class="sort-group">
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy">
+                    <option value="">-- No Sorting --</option>
+                    <option value="title-asc">Title (A-Z)</option>
+                    <option value="title-desc">Title (Z-A)</option>
+                    <option value="id-asc">ID (Ascending)</option>
+                    <option value="id-desc">ID (Descending)</option>
+                    <option value="semester-asc">Semester (Earliest First)</option>
+                    <option value="semester-desc">Semester (Latest First)</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Courses List Section
+             Displays course cards in a grid layout
+             Users can click any card to view detailed information -->
+        <section class="courses-section">
+            <h2>Courses</h2>
+            <div id="coursesList" class="courses-list"></div>
+        </section>
+
+        <!-- Course Details Section
+             Shows detailed information about the selected course -->
+        <section class="details-section">
+            <h2>Course Details</h2>
+            <div id="courseDetails" class="course-details">
+                <p>Select a course to view details</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Link to main application script -->
+    <script src="app.js"></script>
+</body>
+</html>
